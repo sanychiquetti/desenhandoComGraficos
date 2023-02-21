@@ -1,0 +1,29 @@
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas'); // chamar o canvas pro js
+    var pincel = tela.getContext('2d'); //chamar o pinchel em 2d
+
+    pincel.fillStyle = 'DeepPink'; //pegar a tinta
+    pincel.fillRect(0, 0, 600, 400); //O fill é preencher o ret é fazer retângulo,
+    // E DENTRO DO () A POSIÇÃO QUE VAMOS COLOCAR O RETÂNGULO, ONDE X É LARGURA E Y A ALTURA SENDO (X, Y, X, Y)
+
+    pincel.fillStyle = 'MediumPurple';
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = 'Lightgray';
+    pincel.fillRect(400, 0, 200, 400);
+
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath(); //comece um caminho
+    pincel.moveTo(300, 200); // inicio da linha
+    pincel.lineTo(200, 400); // caminho da linha
+    pincel.lineTo(400, 400); // 
+    pincel.fill(); // preencher 
+
+    pincel.fillStyle = 'white';
+    pincel.beginPath();
+    pincel.arc(300, 200, 60, 0, 2 * 3.14); // larg, altura, raio, ângulo inicial, ângulo final em radiâno.
+    pincel.fill();
+</script>
